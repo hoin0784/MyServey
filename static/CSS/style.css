@@ -1,0 +1,148 @@
+
+body{
+  margin:0;
+  width:100vw;
+  height:100vh;
+  font-size: 1.2rem;
+  background: rgb(79, 126, 159);
+  background: radial-gradient(circle, 
+  rgba(79, 126, 159, 1) 51%,
+  rgba(14, 46, 194, 0.469625350140056) 100%);
+}
+
+ #navbar{
+  background-color: #00425A;
+  display:flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 24px;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+} 
+.nav-li{
+  border-radius: 1rem;  
+  transition: all 150ms ease-out;
+} 
+.nav-li:hover {
+  text-decoration: underline;
+  background-color:darkblue;
+  transform: rotate(3deg) scale(1.1);
+}
+
+p{
+  color:dimgray;
+}
+
+.container{
+  justify-content: center;
+  text-align: center;
+  display:flex;
+  background-color: beige;
+  border-radius: 1rem;
+  flex-direction: column;
+  margin: 2rem;
+  
+  box-shadow: 2px 6px 16px 20px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 2px 6px 16px 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 2px 6px 16px 20px rgba(0, 0, 0, 0.8);
+}
+
+#WelcomeContainer{
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+}
+#WelcomeMsg{
+  background-color: beige;
+  border-radius: 1rem;
+  padding: 5px 10px;
+  height:80%;
+ 
+  box-shadow: 2px 4px 19px 17px rgba(0, 0, 0, 0.61);
+    -webkit-box-shadow: 2px 4px 19px 17px rgba(0, 0, 0, 0.61);
+    -moz-box-shadow: 2px 4px 19px 17px rgba(0, 0, 0, 0.61);
+}
+
+#DeclineContainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+#DeclineMsg {
+  background-color: beige;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  height: 80%;
+  margin-top: 5rem;
+
+  box-shadow: 2px 4px 19px 17px rgba(0, 0, 0, 0.61);
+  -webkit-box-shadow: 2px 4px 19px 17px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: 2px 4px 19px 17px rgba(0, 0, 0, 0.61);
+}
+
+#Coding-picture{
+  height: 35%;
+  width: 50%;
+}
+
+.pure-button{
+  padding: 10px 20px;
+  cursor: pointer;
+  outline: none;
+  border:1px;
+  margin:1rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  transition: all 150ms ease-out;
+}
+
+.pure-button:hover {
+  text-decoration: underline;
+  background-color:pink;
+  transform: rotate(3deg) scale(1.1);
+}
+
+#Info{
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+
+  display:inline-block;
+  background-color:#ffebee;
+  font-size: large;
+  font-weight: bold;
+  padding:1rem,2rem;
+}
+#Btn{
+  margin-bottom: 1rem;
+}
+
+#Summary_headline{
+  text-align: center;
+  font-style: italic;
+
+}
+
+#Student_year,
+#Student_library,
+#Student_framework{
+  margin-left: 4rem;
+  background-color: #D9AFD9;
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);  
+}
+#Summary_CommentList{
+  margin-left:4rem;
+}
+#Comment{
+  margin-top: 1rem;
+}
+#comment{
+  margin-left:2rem;
+  display:left;
+}
+
+

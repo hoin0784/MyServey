@@ -1,0 +1,70 @@
+{% extends "nav.html" %}
+{% block title %}Survey {% endblock %}
+
+{% block content %}
+
+  <div class="container">
+    <form class="pure-form" action="{{url_for('thanks')}}" method="POST">
+     
+        <legend id="Info">Brifely, type your Information</legend>
+            <label for = "name">Name: </label>
+            <input type="text" class="pure-input-rounded" name = "name" placeholder="Require your name" minlength = "3" required=""><br>
+          
+            <label for = "email">Email: </label>
+            <input type="email" class="pure-input-rounded" name = "email" placeholder="Require your email" minlength="3" required=""><br>
+          <p> 1. Choose your year in School</p>
+            <select id = "stacked-year" name = "year">
+              <option value = "NA"> N/A</option>
+              <option value = "Freshman">Freshman</option>
+              <option value = "Sophomore">Sophomore</option>
+              <option value = "Junior">Junior</option>
+              <option value = "Senior">Senior</option>
+              <option value="Master">Master/Grad</option>
+            </select>
+
+          <p> 2. Click your best Javascript library: </p>
+
+            <input type="radio" id = "React" name = "library" value ="React">
+            <label for="React">React</label>
+
+            <input type="radio" id = "Angular" name = "library" value = "Angular">
+            <label for="Angular">Angular</label>
+
+            <input type="radio" id = "Vue" name = "library" value = "Vue">
+            <label for="Vue">Vue</label>
+
+            <input type="radio" id="etc1" name="library" value = "etc">
+            <label for="Vue">etc..</label> <br>
+
+          <p> 3. Click your best Backend framework: </p>
+
+            <input type="radio" id="Django" name="framework" value = "Django">
+            <label for="Django">Django</label>
+            
+            <input type="radio" id="Flask" name="framework" value = "Flask">
+            <label for="Flask">Flask</label>
+            
+            <input type="radio" id="Express" name="framework" value = "Express">
+            <label for="Express">Express</label> 
+
+            <input type="radio" id="Spring" name="framework" value = "Spring">
+            <label for="Spring">Spring</label>
+
+            <input type="radio" id="etc2" name="framework" value = "etc">
+            <label for="etc2">etc..</label> <br><br>
+            
+            <div>
+              <label for="comment">
+              <input type="checkbox" id="Comment" /> Any comment? (post anonymously)</label>
+              
+              <textarea id="CommentArea" 
+                        name="comment"
+                        placeholder="Type any of your comment here!" 
+                        style="width: 96%"></textarea>
+            </div> 
+            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+    </form>
+  </div>
+
+{% endblock %}
+

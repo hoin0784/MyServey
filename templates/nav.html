@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/CSS/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script defer src="/static/JS/comment.js"></script>
+
+  <title>{% block title %} {% endblock %}</title>
+         {% block head %} {% endblock %}
+</head>
+
+<body>
+  <div id="navbar" class="pure-menu pure-menu-horizontal">
+    <a href="/" class="pure-menu-heading pure-menu-link nav-li">My survey</a>
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item">
+        <a href="/" class="pure-menu-link nav-li">Home</a>
+      </li>
+      <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+        <a href="#" id="menuLink1" class="pure-menu-link nav-li">Contact</a>
+        <ul class="pure-menu-children">
+          <li class="pure-menu-item">
+            <a href="mailto:jang0064@umn.edu" class="pure-menu-link nav-li">Email</a>
+          </li>
+          <li class="pure-menu-item">
+            <a href="https://www.linkedin.com/in/hoin0784/" target="_blank" class="pure-menu-link nav-li">Linkdein</a>
+          </li>
+          <li class="pure-menu-item">
+            <a href="https://github.com/hoin0784" target="_blank" class="pure-menu-link nav-li">Github</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  {% block content %} {% endblock %}
+
+</body>
+</html>

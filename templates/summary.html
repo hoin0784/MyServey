@@ -1,0 +1,55 @@
+{% extends "nav.html" %}
+{% block title %} Survey Summary! {% endblock %}
+
+{% block head %} 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" type="text/javascript"></script>
+  <script src="/static/JS/student_year.js" type="text/javascript"></script>
+  <script src="/static/JS/library.js" type="text/javascript"></script>
+  <script src="/static/JS/framework.js" type="text/javascript"></script>
+  
+{% endblock %}
+
+{% block content %}
+    <!-- Data that I am going to put to chart-->
+    <!-- 1. student_year -->
+    <!-- 2. Library -->
+    <!-- 3. framework -->
+    <!-- 4. student_comment -->
+
+  <div style="width:50vw">
+    <h2 id = "Summary_headline"> School year distribution of students</h2>
+    <canvas id="Student_year"></canvas>
+    <h2 id = "Summary_headline"> Distribution of student preferred libraries</h2>
+    <canvas id="Student_library"></canvas>
+    <h2 id = "Summary_headline"> Distribution of student preferred framework</h2>
+    <canvas id="Student_framework"></canvas>
+  </div>
+
+  <br>
+  <br>
+  <h2 id ="Summary_CommentList"> Anonymous comment lists:</h2>
+  <div id = "comment" style="padding-left: 1rem">
+    <ol>
+      {% for comment in data_summary%}
+        {% if comment.student_comment != "" %}
+          <li style="padding: 3px">{{comment.student_comment}}</li>
+        {% endif%}
+      {% endfor %}
+    </ol>
+  </div>
+  <br>
+  <br>
+
+  <script type = text/javascript>
+    // To get the data, it should be change to json type
+    const year_chart = document.getElementById("Student_year");
+    const library_chart = document.getElementById("Student_library");
+    const framework_chart = document.getElementById("Student_framework");
+    
+    year({{data_summary| tojson}},year_chart)
+    library({{data_summary| tojson}},library_chart)
+    framework({{data_summary| tojson}},framework_chart)
+
+  </script>
+   
+{% endblock %}
