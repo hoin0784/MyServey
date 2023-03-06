@@ -1,19 +1,53 @@
-# CSCI 5117 Spring 2023 -- Module 1 Homework
+# CSCI 5117 Spring 2023 - My survey
 
-Instructions can be [found on canvas](https://canvas.umn.edu/courses/355584/pages/homework-1)
+## App Design -
 
-You are required to fill out all of the following sections to help us grade your submission:
+<img src = "static/IMG/Mainpage.png">
+Figure 1 "Index.html"
 
-## Student 
+    / -> The root page descirbes the survey and asks the users to consent to participate. It has two buttons at the bottom: "consent"(go to /survey) and "decline"(go to /decline).
+<hr>
 
-* Hoin Jang, jang0064@umn.edu
+<img src = "static/IMG/SurveyPage.png">
+Figure 2 "survey.html"
+    
+    /survey -> Asks the user's perference of lirary,framework,school year and comment.
 
-## Link to Site
+<hr>
+<img src = "static/IMG/Declinepage.png">
+Figure 3 "decline.html"
 
-<https://mysurvey.onrender.com/>
-## Challenge Task
+    /decline -> A page that shows "thanks anyway"
 
-* I started the challenge task: YES
-* I completed the challenge task: YES
+<hr>
+<img src = "static/IMG/api:results.png">
+Figure 4 "Api results" <br><br>
 
-link: <https://mysurvey.onrender.com/admin/summary>
+    /api/results -> This URL is an API endpoint that returns a JSON representation of all the survey responses that I have collected to date.
+
+<hr>
+<img src = "static/IMG/ReverseTrue.png">
+Figure 5 "Api results reverse"
+
+    /api/results?=reverse= true -> if the user includes this query parameter the results are instead ordered by most recent firsta
+
+<hr>
+<img src = "static/IMG/FirstChart.png">
+Figure 5 "FirstChart"
+
+<hr>
+<img src = "static/IMG/SecondChart.png">
+Figure 6 "SecondChart"
+
+<hr>
+<img src = "static/IMG/CommentPage.png">
+Figure 7 "Comments"
+
+    /admin/summary -> This web page shows an aggregated summary of the survey results.
+  For making the chart, I have used  <https://www.chartjs.org/>
+
+  ## Link to site
+  <https://mysurvey.onrender.com/>
+
+  ## See the survey results
+  <https://mysurvey.onrender.com/admin/summary>
